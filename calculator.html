@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./calculator.css">
@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <!-- partial:index.partial.html -->
+
   <div class="container">
     <div class="result">
       <p id="result-box">0</p>
@@ -40,7 +40,7 @@
     </div>
 
   </div>
-  <!-- partial -->
+ 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js'></script>
 
   <script>
@@ -55,11 +55,9 @@
     let btnSpread = [...btns];
     let allBtnSpread = [...allBtns];
 
-    // For Number Inputs
     btnSpread.forEach((button, i) => {
       button.addEventListener("click", () => {
-        // Inner Values for calculator
-
+       
         if (resultBox.innerHTML == "0") {
           resultBox.innerHTML = "";
         }
@@ -70,12 +68,12 @@
     });
 
 
-    // Function to evalute Strings
+   
     function evaluate(fn) {
       return new Function('return ' + fn)();
     }
 
-    // To calculate All Input
+   
     total.addEventListener('click', () => {
       let allInputs = resultBox.innerHTML;
 
@@ -84,10 +82,11 @@
       console.log(evaluate(allInputs));
     })
 
-    // Clear all Inputs
+    
     clearBtn.addEventListener('click', () => {
       resultBox.innerHTML = "0";
     })
+    
   </script>
 
 </body>
